@@ -24,13 +24,7 @@ const CreateTask = () => {
                         </div>
                         <div className='mb-4'>
                             <h2 className='text-sm text-gray-300 mb-0.5'>Category</h2>
-                            <select className='text-sm py-1 px-2 w-4/5 rounded out;ine-non bg-transparent border-[1px] border-gray-400 md-4'>
-                                <option value=''>Select category</option>
-                                <option value='bug'>Bug</option>
-                                <option value='feature'>Feature</option>
-                                <option value='task'>Task</option>
-                                <option value='other'>Other</option>
-                            </select>
+                            <input className='text-sm py-1 px-2 w-4/5 rounded out;ine-non bg-transparent border-[1px] border-gray-400 md-4' type='text' placeholder='Enter task category' />
                         </div>
                     </div>
                     <div className='w-2/5 flex flex-col items-start'>
