@@ -6,7 +6,7 @@ import TaskList from '../TaskList/TaskList'
 const EmployeeDashboard = ({ handleLogout }) => {
     return (
         <>
-            <div className='p-10 bg-[#1C1C1C] h-screen text-white'>
+            <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white">
                 <Header handleLogout={handleLogout} />
                 <TaskListNumber />
                 <TaskList/>
