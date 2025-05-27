@@ -1,11 +1,13 @@
 "use client"
 import React, { useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
 import Login from './Components/Auth/Login'
 import EmployeeDashboard from './Components/Dashboard/EmployeeDashboard'
 import AdminDashboard from './Components/Dashboard/AdminDashboard'
 
 const page = () => {
   const [user, setUser] = useState(null);
+  const router = useRouter(); 
 
   useEffect(() => {
     const loggedInUser = localStorage.getItem('loggedInUser');
@@ -31,6 +33,7 @@ const page = () => {
   const handleLogout = () => {
     setUser(null);
     localStorage.removeItem('loggedInUser');
+    router.push('/'); 
   };
 
   return (
