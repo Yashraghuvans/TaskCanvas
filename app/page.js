@@ -1,10 +1,10 @@
 "use client"
-import React, { useEffect, useState } from 'react';
-import Login from './Components/Auth/Login';
-import EmployeeDashboard from './Components/Dashboard/EmployeeDashboard';
-import AdminDashboard from './Components/Dashboard/AdminDashboard';
+import React, { useEffect, useState } from 'react'
+import Login from './Components/Auth/Login'
+import EmployeeDashboard from './Components/Dashboard/EmployeeDashboard'
+import AdminDashboard from './Components/Dashboard/AdminDashboard'
 
-const Page = () => {
+const page = () => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
@@ -18,32 +18,30 @@ const Page = () => {
     if (email === 'admin@me.com' && password === '123') {
       setUser('admin');
       localStorage.setItem('loggedInUser', JSON.stringify({ role: 'admin' }));
-    } else if (email === "employee@me.com" && password === "123") {
+    }
+    else if(email=="employee@me.com" && password=="123"){
       setUser('employee');
       localStorage.setItem('loggedInUser', JSON.stringify({ role: 'employee' }));
-    } else {
+    } 
+    else {
       alert('Invalid credentials!');
-      setUser(null);
     }
   };
 
-  
   const handleLogout = () => {
     setUser(null);
     localStorage.removeItem('loggedInUser');
   };
 
   return (
-    <div className='text-white'>
-      {user === 'admin' ? (
-        <AdminDashboard handleLogout={handleLogout} /> 
-      ) : user === 'employee' ? (
-        <EmployeeDashboard handleLogout={handleLogout} /> 
-      ) : (
-        <Login handleLogin={handleLogin} />
-      )}
-    </div>
+    <>
+      <div className='text-white'>
+        {!user ? <Login handleLogin={handleLogin} /> : ""}
+        {user === 'admin' ? <AdminDashboard handleLogout={handleLogout} /> : ""}
+        {user === 'employee' ? <EmployeeDashboard handleLogout={handleLogout} /> : ""}
+      </div>
+    </>
   );
 };
 
-export default Page;
+export default page;
