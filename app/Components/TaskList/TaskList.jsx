@@ -96,15 +96,28 @@ const tasks = [
 const TaskList = () => {
     return (
         <>
-            <div id='tasklist' className='h-[55%] flex items-center justify-start gap-5 flex-nowrap w-full py-5 mt-10 overflow-x-auto'>
+            <div
+                id='tasklist'
+                className='
+                    flex items-stretch justify-start gap-5 flex-nowrap w-full py-5 mt-10 overflow-x-auto
+                    h-auto
+                    sm:h-[55%]
+                '
+            >
                 {tasks.map((task, idx) => (
-                    <div key={idx} className={`flex-shrink-0 h-full w-[300px] ${task.color} rounded-xl py-5 px-5`}>
-                        <div className='flex justify-between items-center'>
-                            <h2 className={`${task.labelBg} text-sm px-3 py-1 rounded`}>{task.label}</h2>
-                            <h2 className='text-sm'>{task.date}</h2>
+                    <div
+                        key={idx}
+                        className={`
+                            flex-shrink-0 w-[85vw] max-w-xs sm:w-[300px] h-full
+                            ${task.color} rounded-xl py-5 px-4 sm:px-5
+                        `}
+                    >
+                        <div className='flex justify-between items-center flex-wrap gap-2'>
+                            <h2 className={`${task.labelBg} text-xs sm:text-sm px-2 sm:px-3 py-1 rounded`}>{task.label}</h2>
+                            <h2 className='text-xs sm:text-sm'>{task.date}</h2>
                         </div>
-                        <h2 className='text-2xl font-semibold mt-5'>{task.title}</h2>
-                        <p className='text-sm mt-2'>{task.desc}</p>
+                        <h2 className='text-lg sm:text-2xl font-semibold mt-4 sm:mt-5'>{task.title}</h2>
+                        <p className='text-xs sm:text-sm mt-2'>{task.desc}</p>
                     </div>
                 ))}
             </div>
