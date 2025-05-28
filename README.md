@@ -10,7 +10,7 @@
   <img src="https://github.com/Yashraghuvans/TaskCanvas/blob/main/public/cover.png" alt="Task Canvas Logo" width="400">
 </p>
 
-**Task Canvas** is a modern and intuitive task management dashboard designed to streamline your workflow, effectively manage team responsibilities, and help you stay focused on your personalized tasks. Whether you're an individual looking to boost productivity or a team collaborating on complex projects, Task Canvas provides the tools you need to succeed.
+[**Task Canvas** ](https://task-canvas-one.vercel.app) is a modern and intuitive task management dashboard designed to streamline your workflow, effectively manage team responsibilities, and help you stay focused on your personalized tasks. Whether you're an individual looking to boost productivity or a team collaborating on complex projects, Task Canvas provides the tools you need to succeed.
 
 ---
 
