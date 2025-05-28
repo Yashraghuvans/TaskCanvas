@@ -1,4 +1,5 @@
 "use client"
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
@@ -7,6 +8,9 @@ const page = () => {
     <>
       <div className="min-h-screen min-w-screen bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white flex flex-col items-center justify-center px-6 py-12 space-y-16">
         <div className="w-full max-w-4xl flex flex-col items-center">
+          <div className="flex justify-center mb-8">
+            <Image src='/logo.jpg' height={120} width={120} alt='cover' className="rounded-full border-4 border-gray-800 shadow-lg" />
+          </div>
           <div className="text-center px-4">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue-400 drop-shadow-lg">
               Welcome to Task Canvas
